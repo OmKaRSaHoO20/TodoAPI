@@ -121,7 +121,7 @@ export const deleteTaskByID = async (req, res) => {
         });
       };
     } catch (err) {
-      return console.log(err);
+      return res.status(500).json({ message: "An error occurred" });
     }
 
     if (!deletedTask) {
