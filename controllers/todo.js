@@ -40,7 +40,7 @@ export const createTask = async (req, res) => {
 
     await session.commitTransaction();
 
-    return res.status(201).json({ message: "Blog created successfully" });
+    return res.status(201).json({ message: "Task created successfully" });
   } catch (error) {
     return res.status(500).json({ message: "An error occurred" });
   }
@@ -52,7 +52,7 @@ export const getAllTask = async (req, res) => {
 
     return res
       .status(201)
-      .json({ message: "Blog retrieved successfully", tasks });
+      .json({ message: "Task retrieved successfully", tasks });
   } catch (error) {
     return res.status(500).json({ message: "An error occurred" });
   }
